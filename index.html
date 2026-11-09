@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OUTERSTUDIOS — Elegant iPhone cases for your everyday style.">
+  <title>OUTERSTUDIOS | iPhone Cases</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="announcement">
+    YOUR IPHONE. YOUR STYLE.
+  </div>
+
+  <header class="header">
+    <nav class="navbar" aria-label="Main navigation">
+
+      <a href="#home" class="logo">OUTERSTUDIOS<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#products">Shop All</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">Our Story</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button id="cart-button" class="cart-button" type="button">
+        Bag (<span id="cart-count">0</span>)
+      </button>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+
+        <p class="eyebrow">THE IPHONE CASE EDIT</p>
+
+        <h1>
+          Your iPhone.<br>
+          Your signature style.
+        </h1>
+
+        <p>
+          Discover beautifully styled iPhone cases in timeless
+          colors and modern designs. Made to complement your everyday.
+        </p>
+
+        <a href="#products" class="primary-button">
+          Shop iPhone Cases
+        </a>
+
+      </div>
+
+      <div class="hero-visual" aria-label="Decorative phone case illustration">
+        <div class="case-silhouette">
+          <span>OUTERSTUDIOS</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="collections-section">
+
+      <div class="section-heading">
+        <p class="eyebrow">FIND YOUR FIT</p>
+        <h2>Made for your iPhone.</h2>
+        <p>Explore our collections by iPhone generation.</p>
+      </div>
+
+      <div class="collection-grid">
+
+        <a href="#products" class="collection-card" data-collection="iphone17">
+          <span>01 / COLLECTION</span>
+          <h3>iPhone 17 Cases</h3>
+          <p>Explore the collection</p>
+        </a>
+
+        <a href="#products" class="collection-card" data-collection="iphone16">
+          <span>02 / COLLECTION</span>
+          <h3>iPhone 16 Cases</h3>
+          <p>Explore the collection</p>
+        </a>
+
+        <a href="#products" class="collection-card" data-collection="iphone15">
+          <span>03 / COLLECTION</span>
+          <h3>iPhone 15 Cases</h3>
+          <p>Explore the collection</p>
+        </a>
+
+      </div>
+    </section>
+
+    <section id="products" class="products-section">
+
+      <div class="section-heading">
+        <p class="eyebrow">THE OUTERSTUDIOS EDIT</p>
+        <h2>Find your everyday favorite.</h2>
+        <p>Minimal details. Beautiful colors. Cases for every mood.</p>
+      </div>
+
+      <div class="filters" id="filters">
+        <button type="button" class="filter active" data-category="all">
+          All Cases
+        </button>
+        <button type="button" class="filter" data-category="iphone17">
+          iPhone 17
+        </button>
+        <button type="button" class="filter" data-category="iphone16">
+          iPhone 16
+        </button>
+        <button type="button" class="filter" data-category="iphone15">
+          iPhone 15
+        </button>
+      </div>
+
+      <div id="product-grid" class="product-grid"></div>
+
+    </section>
+
+    <section id="about" class="about-section">
+
+      <p class="eyebrow">OUR PHILOSOPHY</p>
+
+      <h2>Small details. Big personality.</h2>
+
+      <p>
+        OUTERSTUDIOS is a phone case store concept inspired by
+        timeless design, effortless style, and everyday essentials.
+        We believe your iPhone case should feel as personal as your style.
+      </p>
+
+      <div class="benefits">
+
+        <div>
+          <h3>Timeless style</h3>
+          <p>Elegant colors and minimalist designs.</p>
+        </div>
+
+        <div>
+          <h3>Find your fit</h3>
+          <p>Browse cases by iPhone generation.</p>
+        </div>
+
+        <div>
+          <h3>Everyday expression</h3>
+          <p>Choose a look that feels like you.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="contact" class="contact-section">
+
+      <p class="eyebrow">GET IN TOUCH</p>
+
+      <h2>Let's stay connected.</h2>
+
+      <p>Have a question about our iPhone case collection?</p>
+
+      <form action="https://formsubmit.co/hugokruminsEtsy@gmail.com" method="POST">
+        <label for="contact-name">Your Name</label>
+        <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+      
+        <label for="contact-email">Your Email</label>
+        <input type="email" id="contact-email" name="email" placeholder="Your email" required>
+      
+        <label for="contact-message">Your Message</label>
+        <textarea id="contact-message" name="message" placeholder="Your message" rows="5" required></textarea>
+      
+        <input type="hidden" name="_subject" value="New OUTERSTUDIOS message">
+      
+        <button type="submit" class="primary-button">Send Message</button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <aside id="cart-panel" class="cart-panel" hidden aria-label="Shopping bag">
+
+    <div class="cart-header">
+      <h2>Your Bag</h2>
+      <button id="close-cart" type="button" aria-label="Close bag">✕</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <p class="cart-total">
+      Subtotal: <span id="cart-total">€0.00</span>
+    </p>
+
+    <button id="checkout-button" class="primary-button" type="button">
+      Demo Checkout
+    </button>
+
+    <p class="demo-note">
+      Demo store only. No real payments or orders are accepted.
+    </p>
+
+  </aside>
+
+  <footer>
+
+    <a href="#home" class="logo">OUTERSTUDIOS<span>.</span></a>
+
+    <p>Your iPhone. Your signature style.</p>
+
+    <p>© 2026 OUTERSTUDIOS. Demo store.</p>
+
+  </footer>
+
+</body>
+</html>
