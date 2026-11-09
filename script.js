@@ -108,9 +108,14 @@ modelSelect.setAttribute("aria-label", "Choose iPhone model");
 
 const addButton = document.createElement("button");
 addButton.type = "button";
-addButton.textContent = "Add to Bag";
+addButton.textContent = "Shop on Etsy";
+
 addButton.addEventListener("click", () => {
-  addToCart(product.id, modelSelect.value);
+  window.open(
+    "https://www.etsy.com/shop/OuterStudios",
+    "_blank",
+    "noopener,noreferrer"
+  );
 });
 
 card.append(image, title, model, price, modelSelect, addButton);
