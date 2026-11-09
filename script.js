@@ -245,9 +245,7 @@ function renderCart() {
   checkoutButton.disabled = cart.length === 0;
 }
 
-cartButton.addEventListener("click", () => {
-  cartPanel.hidden = !cartPanel.hidden;
-});
+
 
 closeCartButton.addEventListener("click", () => {
   cartPanel.hidden = true;

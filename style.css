@@ -319,3 +319,52 @@ footer p { font-size: 13px; color: var(--muted); }
   width: 100%;
   height: auto;
 }
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  text-align: center;
+}
+
+.hero-content p {
+  text-align: center;
+}
+
+.hero-content h1 {
+font-size: clamp(36px, 5vw, 64px);
+line-height: 1.15;
+text-align: center;
+margin-bottom: 24px;
+}
+
+.hero-content p {
+max-width: 650px;
+margin: 0 auto 30px;
+text-align: center;
+}
+
+.hero-content .eyebrow {
+margin-bottom: 24px;
+}
+/* Keep luxury headline on one line on desktop */
+@media (min-width: 1100px) {
+  .hero-content {
+    max-width: 1300px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+    white-space: nowrap;
+  }
+}
